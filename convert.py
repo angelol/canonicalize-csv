@@ -11,7 +11,7 @@ def main():
         sys.exit(1)
     
     outfile = io.open(filename + '_converted.csv', 'w', encoding="utf-8")
-    writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_ALL)
+    writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
     for line in csv.reader(csvfile, delimiter=','):
         writer.writerow(line)
     
